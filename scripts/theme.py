@@ -1,13 +1,17 @@
 def assign_theme(text):
-    text = text.lower()
 
-    if any(w in text for w in ["login", "otp", "password", "verify"]):
-        return "Account Issues"
-    elif any(w in text for w in ["transfer", "payment", "failed"]):
+    text = str(text).lower()
+
+    if any(x in text for x in ["login", "otp", "password"]):
+        return "Login Issues"
+
+    if any(x in text for x in ["transfer", "transaction", "payment"]):
         return "Transaction Issues"
-    elif any(w in text for w in ["crash", "slow", "error", "freeze"]):
+
+    if any(x in text for x in ["slow", "crash", "bug", "error"]):
         return "Performance Issues"
-    elif any(w in text for w in ["ui", "design", "easy", "navigation"]):
+
+    if any(x in text for x in ["ui", "interface", "design", "easy", "user friendly"]):
         return "UI/UX"
-    else:
-        return "Other"
+
+    return "Other"
