@@ -1,17 +1,6 @@
 # Customer Experience Analytics for Fintech Apps
 
-This project analyzes Google Play Store reviews for three Ethiopian banks:
-
-- Commercial Bank of Ethiopia (CBE)
-- Bank of Abyssinia (BOA)
-- Dashen Bank
-
-It is part of the 10 Academy AI Mastery Week 2 Challenge, where the goal is to turn raw user reviews into useful business insights using data engineering and NLP techniques.
-
-The project helps banks understand:
-- What users like
-- What users complain about
-- What features they want
+This project analyzes Google Play Store reviews for three Ethiopian banks: Commercial Bank of Ethiopia (CBE), Bank of Abyssinia (BOA) and Dashen Bank. It is part of the 10 Academy AI Mastery Week 2 Challenge, where the goal is to turn raw user reviews into useful business insights using data engineering and NLP techniques.
 
 ---
 
@@ -33,7 +22,6 @@ The project helps banks understand:
 - Reviews may include multiple languages
 - Older reviews may not be accessible
 
----
 
 ### Task 2: Sentiment and Thematic Analysis
 
@@ -62,7 +50,7 @@ The project helps banks understand:
 - Login and authentication issues were commonly reported
 - UI/UX feedback was generally more positive than functional issues
 
----
+
 
 ### Task 3: Data Storage in PostgreSQL
 
@@ -84,8 +72,17 @@ The project helps banks understand:
     - identified_theme
     - source
 
+
+### Task 4: Insights and Recommendations
+
+- PostgreSQL data was used to analyze sentiment, ratings, and review themes across BOA, CBE, and Dashen banks.
+- Key insights were extracted by comparing sentiment distribution, average ratings, and dominant user feedback themes using SQL joins.
+- Drivers and pain points were identified per bank based on grouped sentiment themes.
+- Visualizations were created using Matplotlib and Seaborn to support findings, including sentiment distribution, rating variation, and theme frequency.
+- Data-driven recommendations were provided to improve user experience, focusing on transaction reliability, performance issues, and app usability.
+
 ---
-# Project Structure
+## Project Structure
 
 ```bash
 fintech-review-analytics/
@@ -101,6 +98,10 @@ fintech-review-analytics/
 │   ├── web-scraping.ipynb
 │   ├── sentiment-analysis.ipynb
 │   ├── database.ipynb
+│   ├── insights.ipynb
+│
+├── reports/
+│   ├── report.md
 │
 ├── scripts/
 │   ├── scrap.py
@@ -112,7 +113,9 @@ fintech-review-analytics/
 │   ├── db_connection.py
 │   ├── create_tables.py
 │   ├── insert_data.py
-│   └── verify_data.py
+│   ├── verify_data.py
+│   ├── visualization.py
+│   └── insights.py
 │
 ├── sql/
 │   └── schema.sql
@@ -125,7 +128,7 @@ fintech-review-analytics/
 
 ---
 
-# Tools & Technologies
+## Tools & Technologies
 
 - Python
 - pandas
